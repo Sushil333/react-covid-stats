@@ -1,7 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import BottomNavigation from "@material-ui/core/BottomNavigation";
-import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
+import {
+  BottomNavigation,
+  BottomNavigationAction,
+  Paper,
+} from "@material-ui/core";
 import LanguageIcon from "@material-ui/icons/Language";
 import FlagIcon from "@material-ui/icons/Flag";
 import InfoIcon from "@material-ui/icons/Info";
@@ -10,7 +13,6 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   root: {
     textAlign: "center",
-    backgroundColor: "#f2f2f2",
   },
 });
 
@@ -32,32 +34,34 @@ export default function SimpleBottomNavigation() {
   }, []);
 
   return (
-    <BottomNavigation
-      value={value}
-      onChange={(event, newValue) => {
-        setValue(newValue);
-      }}
-      showLabels
-      className={classes.root}
-    >
-      <BottomNavigationAction
-        component={Link}
-        to={"/"}
-        label="Global"
-        icon={<LanguageIcon />}
-      />
-      <BottomNavigationAction
-        component={Link}
-        to={"/countries"}
-        label="Countries"
-        icon={<FlagIcon />}
-      />
-      <BottomNavigationAction
-        component={Link}
-        to={"/about"}
-        label="About"
-        icon={<InfoIcon />}
-      />
-    </BottomNavigation>
+    <Paper elevation={1}>
+      <BottomNavigation
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+        showLabels
+        className={classes.root}
+      >
+        <BottomNavigationAction
+          component={Link}
+          to={"/"}
+          label="Global"
+          icon={<LanguageIcon />}
+        />
+        <BottomNavigationAction
+          component={Link}
+          to={"/countries"}
+          label="Countries"
+          icon={<FlagIcon />}
+        />
+        <BottomNavigationAction
+          component={Link}
+          to={"/about"}
+          label="About"
+          icon={<InfoIcon />}
+        />
+      </BottomNavigation>
+    </Paper>
   );
 }

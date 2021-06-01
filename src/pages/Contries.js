@@ -4,7 +4,6 @@ import {
   makeStyles,
   CircularProgress,
   Paper,
-  Divider
 } from "@material-ui/core";
 import SearchBar from "../components/SearchBar";
 import { useState, useEffect } from "react";
@@ -19,13 +18,10 @@ const useStyles = makeStyles({
   },
   paper: {
     marginTop: "1em",
+    padding: ".25em 1em"
   },
   title: {
     fontSize: 14,
-  },
-  divider: {
-    height: "1px",
-    backgroundColor: "#ccc"
   },
 });
 
@@ -101,7 +97,6 @@ export default function Contries() {
                 Recovered: {ele.recovered.toLocaleString()} | Critical:{" "}
                 {ele.critical}
               </Typography>
-              <Divider light />
             </Paper>
           ))}
         </>

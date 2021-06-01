@@ -26,7 +26,7 @@ export default function SearchBar(props) {
   const classes = useStyles();
   const { onChange } = props
   return (
-    <Paper className={classes.root} elevation={3}>
+    <Paper className={classes.root} elevation={2}>
       <InputBase
         className={classes.input}
         placeholder="Search..."

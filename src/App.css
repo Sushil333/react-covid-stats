@@ -13,4 +13,5 @@
   flex-grow: 1;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+  background: #f4f4f4;
 }

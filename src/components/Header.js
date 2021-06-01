@@ -34,7 +34,7 @@ function DenseAppBar(props) {
 
   return (
     <AppBar className={classes.root} position="fixed" elevation={1}>
-      <Toolbar variant="dense">
+      <Toolbar >
         <Typography variant="h6" color="inherit">
           {title}
         </Typography>
