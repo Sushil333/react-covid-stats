@@ -1,5 +1,5 @@
 const CACHE_NAME = "version-1";
-const urlToCache = ["index.hrml", "offline.html"];
+const urlToCache = ["index.html", "offline.html"];
 
 const self = this;
 
