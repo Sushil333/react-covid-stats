@@ -63,10 +63,10 @@ export default function Contries() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    let target = e.target;
+    let target = e.target.value.toLowerCase();
 
     setFilterData(
-      allData.filter((x) => x.country.toLowerCase().includes(target.value))
+      allData.filter((x) => x.country.toLowerCase().includes(target))
     );
   };
 
